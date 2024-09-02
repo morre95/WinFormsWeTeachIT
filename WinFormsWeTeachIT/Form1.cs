@@ -34,20 +34,6 @@ namespace WinFormsWeTeachIT
             }
         }
 
-        private void SaveToFile(Book book)
-        {
-            if (File.Exists(FileName))
-            {
-                File.AppendAllText(FileName, Environment.NewLine + book.ToString(true));
-            }
-            else
-            {
-                File.WriteAllText(FileName, book.ToString(true));
-            }
-        }
-
-        
-
         private void GenerateRandomBook()
         {
             if (File.Exists(FileName))
