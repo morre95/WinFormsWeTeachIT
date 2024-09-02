@@ -28,35 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            bookTxt = new TextBox();
-            saveButton = new Button();
+            textBook = new TextBox();
+            buttonNew = new Button();
+            debugLabel = new Label();
+            checkBoxAvailable = new CheckBox();
             SuspendLayout();
             // 
-            // bookTxt
+            // textBook
             // 
-            bookTxt.Location = new Point(2, 2);
-            bookTxt.Name = "bookTxt";
-            bookTxt.Size = new Size(341, 23);
-            bookTxt.TabIndex = 0;
-            bookTxt.KeyDown += Books_KeyDown;
+            textBook.Location = new Point(13, 56);
+            textBook.Name = "textBook";
+            textBook.Size = new Size(398, 23);
+            textBook.TabIndex = 0;
             // 
-            // saveButton
+            // buttonNew
             // 
-            saveButton.Location = new Point(349, 1);
-            saveButton.Name = "saveButton";
-            saveButton.Size = new Size(75, 23);
-            saveButton.TabIndex = 1;
-            saveButton.Text = "Save";
-            saveButton.UseVisualStyleBackColor = true;
-            saveButton.Click += saveButton_Click;
+            buttonNew.Location = new Point(13, 27);
+            buttonNew.Name = "buttonNew";
+            buttonNew.Size = new Size(75, 23);
+            buttonNew.TabIndex = 1;
+            buttonNew.Text = "Tipsa mig!";
+            buttonNew.UseVisualStyleBackColor = true;
+            buttonNew.Click += buttonNew_Click;
+            // 
+            // debugLabel
+            // 
+            debugLabel.AutoSize = true;
+            debugLabel.Cursor = Cursors.No;
+            debugLabel.ForeColor = Color.Red;
+            debugLabel.Location = new Point(13, 84);
+            debugLabel.Name = "debugLabel";
+            debugLabel.Size = new Size(0, 15);
+            debugLabel.TabIndex = 4;
+            // 
+            // checkBoxAvailable
+            // 
+            checkBoxAvailable.AutoSize = true;
+            checkBoxAvailable.Location = new Point(417, 60);
+            checkBoxAvailable.Name = "checkBoxAvailable";
+            checkBoxAvailable.Size = new Size(81, 19);
+            checkBoxAvailable.TabIndex = 5;
+            checkBoxAvailable.Text = "Tillgänglig";
+            checkBoxAvailable.UseVisualStyleBackColor = true;
+            checkBoxAvailable.CheckedChanged += CheckBoxAvailable_CheckedChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(saveButton);
-            Controls.Add(bookTxt);
+            ClientSize = new Size(501, 102);
+            Controls.Add(checkBoxAvailable);
+            Controls.Add(debugLabel);
+            Controls.Add(buttonNew);
+            Controls.Add(textBook);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -65,7 +89,9 @@
 
         #endregion
 
-        private TextBox bookTxt;
-        private Button saveButton;
+        private TextBox textBook;
+        private Button buttonNew;
+        private Label debugLabel;
+        private CheckBox checkBoxAvailable;
     }
 }
