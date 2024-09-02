@@ -28,12 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            bookTxt = new TextBox();
+            saveButton = new Button();
+            SuspendLayout();
+            // 
+            // bookTxt
+            // 
+            bookTxt.Location = new Point(2, 2);
+            bookTxt.Name = "bookTxt";
+            bookTxt.Size = new Size(341, 23);
+            bookTxt.TabIndex = 0;
+            bookTxt.KeyDown += Books_KeyDown;
+            // 
+            // saveButton
+            // 
+            saveButton.Location = new Point(349, 1);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(75, 23);
+            saveButton.TabIndex = 1;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(saveButton);
+            Controls.Add(bookTxt);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox bookTxt;
+        private Button saveButton;
     }
 }
