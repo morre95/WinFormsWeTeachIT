@@ -35,7 +35,6 @@
             Insert = new Button();
             Delete = new Button();
             pictureBox1 = new PictureBox();
-            radioButton1 = new RadioButton();
             radioImage1 = new RadioButton();
             radioImage2 = new RadioButton();
             radioImage3 = new RadioButton();
@@ -108,17 +107,6 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(0, 0);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(94, 19);
-            radioButton1.TabIndex = 3;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "radioButton1";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
             // radioImage1
             // 
             radioImage1.AutoSize = true;
@@ -163,7 +151,6 @@
             Controls.Add(radioImage3);
             Controls.Add(radioImage2);
             Controls.Add(radioImage1);
-            Controls.Add(radioButton1);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Controls.Add(listBox);
@@ -185,7 +172,6 @@
         private Button Add;
         private TextBox textBox;
         private PictureBox pictureBox1;
-        private RadioButton radioButton1;
         private RadioButton radioImage1;
         private RadioButton radioImage2;
         private RadioButton radioImage3;
